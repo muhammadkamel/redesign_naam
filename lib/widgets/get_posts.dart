@@ -29,11 +29,11 @@ class _GetPostState extends State<GetPost> with SingleTickerProviderStateMixin {
       ),
       body: ListView(
         children: <Widget>[
-          PostsCycles(
-            title: 'Posts',
-            pageController: pageController,
-            posts: posts,
-          ),
+          // PostsCycles(
+          //   title: 'Posts',
+          //   pageController: pageController,
+          //   posts: posts,
+          // ),
         ],
       ),
     );

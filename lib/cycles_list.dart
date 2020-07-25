@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:redesign_naam/screen/cycles.dart';
 
+HomeCycles myCycle = HomeCycles();
+
 final List<Widget> mySlider = [
   // First widget
   GestureDetector(
     onTap: () {
       print('I am index 0');
-      moveToMe(0);
+      movePageZero(0);
+      // moveToMyPage(0);
     },
     child: Container(
       width: 400,
@@ -74,7 +77,7 @@ final List<Widget> mySlider = [
   GestureDetector(
     onTap: () {
       print('I am index 1');
-      moveToMe(1);
+      moveToMyPage(1);
     },
     child: Container(
       width: 400,
@@ -140,7 +143,7 @@ final List<Widget> mySlider = [
   GestureDetector(
     onTap: () {
       print('I am index 2');
-      moveToMe(2);
+      moveToMyPage(2);
     },
     child: Container(
       width: 400,
@@ -206,7 +209,7 @@ final List<Widget> mySlider = [
   GestureDetector(
     onTap: () {
       print('I am index 3');
-      moveToMe(3);
+      moveToMyPage(3);
     },
     child: Container(
       width: 400,
@@ -271,8 +274,8 @@ final List<Widget> mySlider = [
   // Five widget
   GestureDetector(
     onTap: () {
-      print('I am index 2');
-      moveToMe(4);
+      print('I am index 4');
+      moveToMyPage(4);
     },
     child: Container(
       width: 400,
@@ -337,8 +340,8 @@ final List<Widget> mySlider = [
   // Six widget
   GestureDetector(
     onTap: () {
-      print('I am index 3');
-      moveToMe(5);
+      print('I am index 5');
+      movePageZero(5);
     },
     child: Container(
       width: 400,

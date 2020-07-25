@@ -5,22 +5,36 @@ import 'package:redesign_naam/components/bottom_nav_bar.dart';
 import 'package:redesign_naam/components/constants.dart';
 import 'package:redesign_naam/cycles_list.dart';
 
+CarouselController controller = CarouselController();
+// AnimationController _control;
+Animation animation;
+
+moveToMyPage(int page) => controller.animateToPage(page);
+movePageZero(int zero) {
+  if (zero == 0) {
+    controller.animateToPage(
+      0,
+      duration: Duration(milliseconds: 10),
+    );
+  } else if (zero == 5) {
+    controller.animateToPage(
+      5,
+      duration: Duration(milliseconds: 10),
+    );
+  }
+}
+
 class HomeCycles extends StatefulWidget {
   @override
   _HomeCyclesState createState() => _HomeCyclesState();
 }
 
-final CarouselController _controller = CarouselController();
-
-moveToMe(int myPage) {
-  return _controller.animateToPage(
-    myPage,
-//    curve: Curves.easeInOut,
-//    duration: Duration(milliseconds: 2000),
-  );
-}
-
 class _HomeCyclesState extends State<HomeCycles> {
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,7 +62,10 @@ class _HomeCyclesState extends State<HomeCycles> {
                 child: CarouselSlider(
                   items: mySlider,
                   options: CarouselOptions(
+                      // autoPlay: true,
+                      // aspectRatio: 2.0,
                       enlargeCenterPage: true,
+                      // enlargeStrategy: CenterPageEnlargeStrategy.height,
                       height: MediaQuery.of(context).size.height * 0.9,
                       initialPage: 0,
                       scrollDirection: Axis.horizontal,
@@ -56,8 +73,8 @@ class _HomeCyclesState extends State<HomeCycles> {
                       autoPlayAnimationDuration: Duration(seconds: 2),
                       pauseAutoPlayOnManualNavigate: true,
                       aspectRatio: 5.9,
-                      carouselController: _controller),
-                  carouselController: _controller,
+                      carouselController: controller),
+                  carouselController: controller,
                 ),
               ),
               SizedBox(
@@ -84,7 +101,7 @@ class _HomeCyclesState extends State<HomeCycles> {
                       ),
                       onPressed: () {
                         setState(() {
-                          _controller.previousPage();
+                          controller.previousPage();
                         });
                       },
                     ),
@@ -106,7 +123,7 @@ class _HomeCyclesState extends State<HomeCycles> {
                       ),
                       onPressed: () {
                         setState(() {
-                          _controller.nextPage();
+                          controller.nextPage();
                         });
                       },
                     ),

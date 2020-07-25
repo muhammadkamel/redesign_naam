@@ -4,15 +4,23 @@ import 'package:redesign_naam/screen/cycles.dart';
 import 'package:redesign_naam/widgets/get_posts.dart';
 import 'dart:math' as math;
 
+import 'widgets/posts_cycles.dart';
+
 void main() => runApp(MyApp());
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  PageController pageController;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Montserrat'),
-      initialRoute: 'Cycles',
+      initialRoute: 'HomeCycles',
       routes: {
         'Cycles': (context) => HomeCycles(),
         'Alarms': (context) => Alarms(),
@@ -44,8 +52,8 @@ class MyPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final width = size.width;
-    final height = size.height;
+    // final width = size.width;
+    // final height = size.height;
     canvas.drawLine(p1, p2, _paint);
     // canvas.drawOval(Rect.fromLTRB(0, 0, width, height), _paint);
     canvas.drawLine(p3, p4, _paint2);
