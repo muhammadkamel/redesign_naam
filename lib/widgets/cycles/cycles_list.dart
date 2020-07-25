@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redesign_naam/screen/cycles.dart';
+import 'package:redesign_naam/widgets/cycles/cycles.dart';
 
 HomeCycles myCycle = HomeCycles();
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redesign_naam/widgets/cycles_list_page.dart';
+import 'package:redesign_naam/widgets/cycles/cycles_list_page.dart';
 
 class SecondCarousel extends StatelessWidget {
   SecondCarousel(

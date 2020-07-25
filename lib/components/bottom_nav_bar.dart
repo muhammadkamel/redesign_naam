@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redesign_naam/components/constants.dart';
-import 'package:redesign_naam/widgets/routes.dart';
+import 'package:redesign_naam/widgets/bottom_nav_bar/routes.dart';
 
 class BottomNavBar extends StatefulWidget {
   @override

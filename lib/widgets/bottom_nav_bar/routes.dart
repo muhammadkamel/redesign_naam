@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:redesign_naam/screen/about.dart';
-import 'package:redesign_naam/screen/alarms.dart';
-import 'package:redesign_naam/screen/cycles.dart';
+import 'package:redesign_naam/widgets/about/about.dart';
+import 'package:redesign_naam/widgets/alarms/alarms.dart';
+import 'package:redesign_naam/widgets/cycles/cycles.dart';
 
 class MyRouting {
   Route createRouting(int index) {

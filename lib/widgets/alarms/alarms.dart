@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:redesign_naam/components/bottom_nav_bar.dart';
 import 'package:redesign_naam/components/constants.dart';
-import 'package:redesign_naam/widgets/alarm_set.dart';
+import 'package:redesign_naam/widgets/alarms/alarm_set.dart';
 
 class Alarms extends StatefulWidget {
   @override

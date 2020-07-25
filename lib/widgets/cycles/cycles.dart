@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:redesign_naam/components/bottom_nav_bar.dart';
 import 'package:redesign_naam/components/constants.dart';
-import 'package:redesign_naam/cycles_list.dart';
+import 'package:redesign_naam/widgets/cycles/cycles_list.dart';
 
 CarouselController controller = CarouselController();
 // AnimationController _control;
@@ -62,18 +62,19 @@ class _HomeCyclesState extends State<HomeCycles> {
                 child: CarouselSlider(
                   items: mySlider,
                   options: CarouselOptions(
-                      // autoPlay: true,
-                      // aspectRatio: 2.0,
-                      enlargeCenterPage: true,
-                      // enlargeStrategy: CenterPageEnlargeStrategy.height,
-                      height: MediaQuery.of(context).size.height * 0.9,
-                      initialPage: 0,
-                      scrollDirection: Axis.horizontal,
-                      scrollPhysics: ScrollPhysics(),
-                      autoPlayAnimationDuration: Duration(seconds: 2),
-                      pauseAutoPlayOnManualNavigate: true,
-                      aspectRatio: 5.9,
-                      carouselController: controller),
+                    // autoPlay: true,
+                    // aspectRatio: 2.0,
+                    enlargeCenterPage: true,
+                    // enlargeStrategy: CenterPageEnlargeStrategy.height,
+                    height: MediaQuery.of(context).size.height * 0.9,
+                    initialPage: 0,
+                    scrollDirection: Axis.horizontal,
+                    scrollPhysics: ScrollPhysics(),
+                    autoPlayAnimationDuration: Duration(seconds: 2),
+                    pauseAutoPlayOnManualNavigate: true,
+                    aspectRatio: 5.9,
+                    carouselController: controller,
+                  ),
                   carouselController: controller,
                 ),
               ),
